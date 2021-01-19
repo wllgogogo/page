@@ -1,0 +1,607 @@
+// 查询公共样式
+.public-search {
+  overflow: hidden;
+  position: fixed;
+  top: 90px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 360px;
+  background-color: #545a70;
+  .search-content {
+    max-width: 1440px;
+    width: 100%;
+    h6 {
+      margin: 76px 0 10px 0;
+      font-size: 24px;
+      color: #fff;
+    }
+    .row {
+      display: flex;
+      .tabs {
+        display: flex;
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 160px;
+          height: 60px;
+          color: #fff;
+          font-size: 16px;
+          background-color: #73788b;
+          cursor: pointer;
+          & + span {
+            border-left: 1px solid #676767;
+          }
+          &:first-child {
+            border-radius: 4px 0 0 4px;
+          }
+          &:last-child {
+            border-radius: 0 4px 4px 0;
+          }
+          &:hover,
+          &.active {
+            color: #333;
+            background-color: #f1f2f5;
+          }
+        }
+      }
+      // 输入框后图标
+      .city-content {
+        padding: 2px 5px;
+        background-color: #a5a9b5;
+        border-radius: 5px;
+      }
+    }
+    /deep/ .ivu-input-wrapper,
+    /deep/ .ivu-date-picker {
+      margin: 0 20px 20px 0;
+    }
+    /deep/ .ivu-cascader-rel {
+      margin-bottom: 20px;
+      /deep/ .ivu-input-wrapper {
+        margin-bottom: 0;
+      }
+    }
+    /deep/ .ivu-input,
+    /deep/ .ivu-select {
+      height: 60px;
+      color: #fff;
+      background-color: #73788b;
+      border: none;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    /deep/ .ivu-input-prefix,
+    /deep/ .ivu-input-suffix,
+    /deep/ .ivu-input-prefix i,
+    /deep/ .ivu-input-suffix i,
+    /deep/ .ivu-input-icon {
+      line-height: 60px;
+      color: #fff;
+    }
+    // 选择框
+    /deep/ .ivu-select-single .ivu-select-selection .ivu-select-placeholder {
+      height: 58px;
+      color: #cccccc;
+      background-color: #73788b;
+      border: none;
+      line-height: 60px;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    // 下拉时
+    /deep/ .ivu-select-single .ivu-select-selection {
+      height: 60px;
+      color: #fff;
+      background-color: #73788b;
+      border: none;
+      &:focus {
+        box-shadow: none;
+      }
+    }
+    // 选中后的样式修改
+    /deep/ .ivu-select-single .ivu-select-selection .ivu-select-selected-value {
+      height: 60px;
+      color: #fff;
+      background-color: #73788b;
+      border: none;
+      line-height: 62px;
+    }
+    .err-log {
+      color: #ff9b00;
+      margin: 0 2px 0 15px;
+    }
+    /deep/ .ivu-icon-ios-arrow-down {
+      color: #fff;
+      &:first-child {
+        top: 40%;
+      }
+    }
+    /deep/ .ivu-icon-ios-close-circle {
+      line-height: 60px;
+      color: #fff;
+    }
+    /deep/ .ivu-cascader-label {
+      line-height: 60px;
+      color: #fff;
+    }
+  }
+}
+
+// 查询结构公共样式
+.public-search-condition {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 1440px;
+  height: 100px;
+  margin: 20px 0;
+  padding: 0 30px 0 40px;
+  background-color: #fff;
+  border-radius: 4px;
+  .condition {
+    display: flex;
+    align-items: center;
+    .item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      height: 40px;
+      padding: 0 15px;
+      background-color: #f1f2f5;
+      border-radius: 4px;
+      & + .item {
+        margin-left: 10px;
+      }
+    }
+  }
+  button {
+    margin-left: 12px;
+  }
+}
+
+// UI设计图的样式跟以前有冲突，用result-lists类名来控制新页面的样式
+.result-lists {
+  .ivu-btn:first-child {
+    margin-left: 0;
+  }
+  .text-right {
+    margin-right: 0;
+  }
+}
+
+// 公共card样式
+.public-form-card {
+  background: #fff;
+  padding: 20px;
+  .ivu-row {
+    border-left: 1px solid #e5e5e5;
+    &:first-of-type {
+      border-top: 1px solid #e5e5e5;
+    }
+    .ivu-col {
+      border-bottom: 1px solid #e5e5e5;
+      border-right: 1px solid #e5e5e5;
+      &.no-right-border {
+        border-right: none;
+      }
+    }
+    .ivu-form-item-label {
+      border-right: 1px solid #e5e5e5;
+    }
+  }
+  .item-form-title {
+    height: 35px;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(51, 51, 51, 1);
+    line-height: 35px;
+  }
+  .ivu-col-span-5 {
+    .ivu-form-item {
+      /deep/ .ivu-select {
+        width: 80px;
+        // margin-left: -63px;
+      }
+    }
+  }
+  .ivu-form-item {
+    margin: 0;
+    &.no-right-border {
+      /deep/ .ivu-form-item-content {
+        border-right: none;
+      }
+    }
+    /deep/ .ivu-form-item-label {
+      background: #f5f6f8;
+      // border: 1px solid #e6e6e6;
+      border-bottom: none;
+      vertical-align: middle;
+    }
+    /deep/ .ivu-form-item-content {
+      padding-left: 4px;
+      padding-right: 4px;
+      // border: 1px solid #e6e6e6;
+      border-bottom: none;
+      border-left: none;
+      background: #fff;
+      vertical-align: middle;
+    }
+    /deep/ .ivu-radio-wrapper {
+      margin-left: 20px;
+    }
+    /deep/ .ivu-cascader,
+    /deep/ .ivu-select,
+    /deep/ .ivu-input {
+      width: 180px;
+      &[disabled] {
+        color: #515a6e;
+        background-color: transparent;
+        border: none;
+        cursor: default;
+      }
+    }
+    /deep/ .ivu-select-disabled {
+      /deep/ .ivu-select-selection {
+        color: #515a6e;
+        background-color: transparent;
+        border: none;
+        cursor: default;
+        /deep/ .ivu-select-placeholder,
+        /deep/ .ivu-icon {
+          display: none;
+        }
+      }
+    }
+    /deep/.ivu-input-group {
+      // width: 60%;
+      width: 210px;
+    }
+    /deep/.ivu-input-group-append {
+      width: 70px;
+      background-color: transparent;
+      border: none;
+    }
+    /deep/.ivu-form-item-error-tip {
+      top: 6px;
+      left: 152px;
+      display: none;
+    }
+    // 给最后一行添加
+    // &:last-child {
+    //     /deep/.ivu-form-item-label {
+    //         border-bottom: 1px solid #e6e6e6;
+    //     }
+    //     /deep/.ivu-form-item-content {
+    //         border-bottom: 1px solid #e6e6e6;
+    //     }
+    // }
+    button {
+      margin-left: 1%;
+    }
+  }
+}
+
+// 详情下公共card的样式
+.is-detail {
+  /deep/ .public-form-card {
+    .ivu-form-item {
+      /deep/.ivu-input,
+      /deep/.ivu-select,
+      /deep/.ivu-select-selection,
+      /deep/.ivu-date-picker {
+        width: 100%;
+        pointer-events: none;
+        text-align: center;
+        border: none;
+        /deep/ .ivu-input-suffix,
+        /deep/ .ivu-icon {
+          display: none;
+        }
+      }
+      /deep/ .ivu-input-group {
+        width: 100%;
+        top: 0;
+      }
+      /deep/ .ivu-input-group-append {
+        display: none;
+      }
+      /deep/ .ivu-select-selected-value {
+        text-align: center;
+      }
+      /deep/ .ivu-select-single .ivu-select-selection .ivu-select-placeholder {
+        display: none;
+      }
+      .ivu-form-item-content {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+  textarea.ivu-input {
+    pointer-events: none;
+  }
+  button:not(.detail-btn) {
+    display: none;
+  }
+}
+
+// 按钮组样式
+.public-btns-group {
+  display: flex;
+  margin: 30px 0;
+  button {
+    & + button {
+      margin-left: 30px;
+    }
+  }
+}
+
+// drawer公共样式
+div /deep/ .ivu-drawer-body {
+  padding: 60px 120px;
+  h3 {
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+  // 二级标题样式
+  h6 {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    font-size: 16px;
+    .line {
+      flex-grow: 1;
+      width: 80%;
+      height: 1px;
+      margin-left: 6px;
+      background-color: #d7d8df;
+    }
+  }
+  .drawer-btns {
+    display: flex;
+    margin-top: 40px;
+    button {
+      margin-right: 20px;
+    }
+  }
+  /deep/ .ivu-date-picker {
+    width: 100%;
+  }
+  /deep/ .ivu-input-prefix,
+  /deep/ .ivu-input-suffix {
+    span {
+      line-height: 32px;
+    }
+  }
+}
+
+// 公共head样式
+.public-head {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  h6 {
+    font-size: 16px;
+  }
+  .iconfont {
+    margin: 0 6px 0 10px;
+    font-size: 20px;
+    color: $warning-color;
+  }
+  .tip {
+    color: #999;
+  }
+}
+
+// remarks公共样式
+.public-remarks {
+  padding: 20px;
+  background-color: #fff;
+  .head {
+    @extend .public-head;
+  }
+  /deep/ textarea.ivu-input {
+    height: 330px;
+    padding: 20px 30px;
+  }
+}
+
+// 公共锚点tab样式
+/deep/ .ivu-anchor-ink:before {
+  display: none;
+}
+.anchor-tabs {
+  @extend %scrollbar-x;
+  display: flex;
+  margin-bottom: 10px;
+  padding-bottom: 16px;
+  .tab {
+    flex-shrink: 0;
+    &.active {
+      .ivu-anchor-link {
+        background-color: #e8eff5;
+        border-color: $light-color;
+      }
+    }
+    &.confirmed {
+      position: relative;
+      .iconfont {
+        display: block;
+        position: absolute;
+        right: 20px;
+        bottom: 0;
+        font-size: 24px;
+        color: $light-color;
+      }
+    }
+    .iconfont {
+      display: none;
+    }
+    .ivu-anchor-link {
+      min-width: 140px;
+      height: 40px;
+      margin-right: 20px;
+      padding: 0;
+      background-color: #fff;
+      border: 1px solid #fff;
+      border-radius: 4px;
+      /deep/ a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        padding: 0 20px;
+        &:hover {
+          color: inherit;
+        }
+      }
+    }
+  }
+}
+
+.flex {
+  display: -webkit-box;
+  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+  display: -moz-box;
+  /* 老版本语法: Firefox (buggy) */
+  display: -ms-flexbox;
+  /* 混合版本语法: IE 10 */
+  display: -webkit-flex;
+  /* 新版本语法: Chrome 21+ */
+  display: flex;
+  /* 新版本语法: Opera 12.1, Firefox 22+ */
+}
+
+.flex-wrap {
+  /* 转为弹性盒模型并自动换行  */
+  display: -webkit-box;
+  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+  display: -moz-box;
+  /* 老版本语法: Firefox (buggy) */
+  display: -ms-flexbox;
+  /* 混合版本语法: IE 10 */
+  display: -webkit-flex;
+  /* 新版本语法: Chrome 21+ */
+  display: flex;
+  /* 新版本语法: Opera 12.1, Firefox 22+ */
+  flex-wrap: wrap;
+}
+
+.flex2 {
+  /*主轴从上到下显示*/
+  display: -webkit-box;
+  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+  display: -moz-box;
+  /* 老版本语法: Firefox (buggy) */
+  display: -ms-flexbox;
+  /* 混合版本语法: IE 10 */
+  display: -webkit-flex;
+  /* 新版本语法: Chrome 21+ */
+  display: flex;
+  /* 新版本语法: Opera 12.1, Firefox 22+ */
+  -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  flex-direction: column;
+}
+
+.flex-b {
+  /*水平两端对齐*/
+  display: -webkit-box;
+  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+  display: -moz-box;
+  /* 老版本语法: Firefox (buggy) */
+  display: -ms-flexbox;
+  /* 混合版本语法: IE 10 */
+  display: -webkit-flex;
+  /* 新版本语法: Chrome 21+ */
+  display: flex;
+  /* 新版本语法: Opera 12.1, Firefox 22+ */
+  -moz-justify-content: space-between;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+.flex-ard {
+  display: -webkit-box;
+  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+  display: -moz-box;
+  /* 老版本语法: Firefox (buggy) */
+  display: -ms-flexbox;
+  /* 混合版本语法: IE 10 */
+  display: -webkit-flex;
+  /* 新版本语法: Chrome 21+ */
+  display: flex;
+  /* 新版本语法: Opera 12.1, Firefox 22+ */
+  -moz-justify-content: space-around;
+  -webkit-justify-content: space-around;
+  justify-content: space-around;
+}
+
+.flex-jc {
+  /* 水平居中 */
+  display: -webkit-box;
+  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+  display: -moz-box;
+  /* 老版本语法: Firefox (buggy) */
+  display: -ms-flexbox;
+  /* 混合版本语法: IE 10 */
+  display: -webkit-flex;
+  /* 新版本语法: Chrome 21+ */
+  display: flex;
+  /* 新版本语法: Opera 12.1, Firefox 22+ */
+  justify-content: center;
+}
+
+.flex-ac {
+  /* 垂直居中 */
+  display: -webkit-box;
+  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+  display: -moz-box;
+  /* 老版本语法: Firefox (buggy) */
+  display: -ms-flexbox;
+  /* 混合版本语法: IE 10 */
+  display: -webkit-flex;
+  /* 新版本语法: Chrome 21+ */
+  display: flex;
+  /* 新版本语法: Opera 12.1, Firefox 22+ */
+  align-items: center;
+}
+
+/*水平垂直居中对齐*/
+.flexmid {
+  display: -webkit-box;
+  /* 老版本语法: Safari, iOS, Android browser, older WebKit browsers. */
+  display: -moz-box;
+  /* 老版本语法: Firefox (buggy) */
+  display: -ms-flexbox;
+  /* 混合版本语法: IE 10 */
+  display: -webkit-flex;
+  /* 新版本语法: Chrome 21+ */
+  display: flex;
+  /* 新版本语法: Opera 12.1, Firefox 22+ */
+  /*子元素主轴对齐方式*/
+  -webkit-box-pack: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  align-items: center;
+  /*子元素交叉轴对齐方式*/
+  -webkit-box-align: center;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+/* hover 按钮 显示 警告色 */
+.hoverf9:hover {
+  background-color: $warning-color;
+}
