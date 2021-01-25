@@ -1,7 +1,8 @@
 <template>
     <div class="whole">
         <div class="whole-bottom">
-            <h1>场所回执录入记录修改</h1>
+            <h1>场所回执录入记录修改ss</h1>
+            <h1>场所回执录入记录修改ss</h1>
             <PlaceInfo ref="PlaceInfo" @submit-form="submit" :Disabled="Disabled" />
             <div class="public-btns-group">
                 <Button class="hoverf9" :disabled="Disabled" shape="circle" size="large" @click="save">保存</Button>
